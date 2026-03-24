@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Ubuntu', sans-serif;
+  --animate-slide-in: slideIn 0.28s ease-out forwards;
+  --animate-slide-out: slideOut 0.28s ease-in forwards;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--radix-collapsible-content-width);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    width: var(--radix-collapsible-content-width);
+  }
+  to {
+    width: 0;
+  }
+}
+
+html {
+  overflow: hidden;
+}
+
+.region-drag {
+  -webkit-app-region: drag;
+}
+
+.region-no-drag {
+  -webkit-app-region: no-drag;
+}
